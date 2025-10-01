@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Recuperación de Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Taller de Recuperación de Matemáticas</h1>
+        <p>Selecciona el periodo y el logro que necesitas repasar para comenzar.</p>
+        <div class="important-note">
+            ⚠️ **Importante:** Cada supletorio tiene un valor de 5 puntos. Debes presentar las soluciones de este taller, con los procedimientos completos, en hojas de examen a la docente.
+        </div>
+    </header>
+
+    <main class="controls-container">
+        <div class="control-group">
+            <label for="periodo">Selecciona el Periodo:</label>
+            <select id="periodo">
+                <option value="">-- Selecciona --</option>
+                <option value="periodo1">Periodo 1</option>
+                <option value="periodo2">Periodo 2</option>
+                <option value="periodo3">Periodo 3</option>
+                <option value="periodo4">Periodo 4</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <label for="logro">Selecciona el Logro Perdido:</label>
+            <select id="logro">
+                <option value="">-- Selecciona --</option>
+            </select>
+        </div>
+        
+        <button id="startButton">Iniciar Taller</button>
+    </main>
+
+    <section id="taller-container" class="taller-container">
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
