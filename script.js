@@ -14,14 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         'periodo2': [
             { value: 'funcion_lineal', text: '1. Función lineal y sistemas de ecuaciones' },
-            { value: 'semejanza', text: '2. Semejanza de polígonos' },
+            { value: 'semejanza_poligonos', text: '2. Semejanza de polígonos' },
             { value: 'tales', text: '3. Teorema de Tales' },
             { value: 'talentos2', text: '4. Talentos matemáticos' }
         ],
         'periodo3': [
             { value: 'funciones_varias', text: '1. Función exponencial, logarítmica y cuadrática' },
-            { value: 'conteo', text: '2. Técnicas de conteo' },
-            { value: 'talentos3', text: '3. Talentos matemáticos' }
+            { value: 'semejanza_poligonos_3', text: '2. Semejanza de polígonos' }, // CORREGIDO
+            { value: 'conteo', text: '3. Técnicas de conteo' }, // CORREGIDO
+            { value: 'talentos3', text: '4. Talentos matemáticos' } // CORREGIDO
         ],
         'periodo4': []
     };
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let tallerContent = '';
 
-        // Taller para el Periodo 1
+        // TALLERES PARA EL PERIODO 1
         if (periodo === 'periodo1') {
             switch (logro) {
                 case 'numeros_complejos':
@@ -99,9 +100,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     break;
                 case 'estadistica1':
+                    // TALLER COMPLETADO: Medidas de localización y variabilidad
                     tallerContent = `
                         <h2>Taller: Medidas de localización y variabilidad (5 puntos)</h2>
-                        <p>Taller no programado. Por favor, realiza el taller en hojas de examen. Consulta el libro de Santillana para los ejercicios correspondientes.</p>
+                        <p>Resuelve los siguientes ejercicios. Recuerda presentar todos los procedimientos en hojas de examen.</p>
+                        <div class="ejercicio">
+                            <h3>1. Calcula la media, la mediana y la moda de los siguientes datos: \\( 15, 18, 12, 10, 18, 14 \\)</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>2. Determina el rango y la desviación media de los siguientes puntajes de un examen: \\( 7, 9, 6, 8, 10, 7, 9, 8 \\)</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>3. En un conjunto de datos agrupados, la clase modal es \\( [20-30) \\). Si su frecuencia es 12, la anterior es 8 y la posterior es 6, calcula el valor exacto de la moda.</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>4. Un grupo de estudiantes obtuvo las siguientes notas en matemáticas: \\( 4.5, 3.8, 4.0, 5.0, 3.2 \\). ¿Cuál es la varianza y la desviación estándar de estas notas?</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>5. Si en una empresa, el salario medio es de \$1'500.000 y el cuartil 3 (Q3) es de \$1'800.000, explica qué significan estos dos datos para los empleados.</h3>
+                        </div>
                     `;
                     break;
                 case 'talentos1':
@@ -128,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } 
         
-        // Taller para el Periodo 2
+        // TALLERES PARA EL PERIODO 2
         else if (periodo === 'periodo2') {
             switch (logro) {
                 case 'funcion_lineal':
@@ -218,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } 
         
-        // Taller para el Periodo 3
+        // TALLERES PARA EL PERIODO 3
         else if (periodo === 'periodo3') {
             switch (logro) {
                 case 'funciones_varias':
@@ -242,7 +259,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     `;
                     break;
-                case 'conteo':
+                case 'semejanza_poligonos_3': // Taller de Semejanza de Polígonos para el Periodo 3
+                    tallerContent = `
+                        <h2>Taller: Semejanza de polígonos (5 puntos)</h2>
+                        <p>Resuelve los siguientes ejercicios. Recuerda presentar todos los procedimientos y los dibujos a color en hojas de examen.</p>
+                        <div class="ejercicio">
+                            <h3>1. Dos hexágonos son semejantes. Si la razón de sus lados es \\( 2:3 \\) y el perímetro del hexágono pequeño es de 30 cm, ¿cuál es el perímetro del hexágono grande?</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>2. En dos figuras semejantes, si el área de la figura A es \\( 40 cm^2 \\) y la razón de semejanza de A a B es \\( 1:2 \\), ¿cuál es el área de la figura B?</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>3. Las áreas de dos triángulos semejantes están en razón de \\( 9:4 \\). Si el lado más pequeño del triángulo más grande mide 12 cm, ¿cuánto mide el lado correspondiente en el triángulo más pequeño?</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>4. Un pentágono tiene lados de 2, 3, 4, 5 y 6 metros. Si se construye un pentágono semejante con un factor de escala de \\( 1.5 \\), ¿cuál es el perímetro del nuevo pentágono?</h3>
+                        </div>
+                        <div class="ejercicio">
+                            <h3>5. Dos círculos son siempre semejantes. Si el radio de un círculo es 5 y el radio del otro es 15, ¿cuál es la razón entre sus áreas y sus perímetros?</h3>
+                        </div>
+                    `;
+                    break;
+                case 'conteo': // Taller de Técnicas de Conteo para el Periodo 3
                     tallerContent = `
                         <h2>Taller: Técnicas de conteo (5 puntos)</h2>
                         <p>Resuelve los siguientes ejercicios. Recuerda presentar las soluciones y los procesos de razonamiento en hojas de examen.</p>
