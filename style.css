@@ -1,121 +1,139 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
     color: #333;
     margin: 0;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
     width: 100%;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
 h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-p {
-    margin-top: 10px;
-}
-
-/* Nota importante */
-.important-note {
-    background-color: #ffeb3b;
-    color: #333;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-size: 1.1em;
-    font-weight: bold;
+    color: #007bff;
     text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
 }
 
-/* Estilos de los controles */
-.controls-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.controls {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .control-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    min-width: 180px;
+    flex-grow: 1;
 }
 
 label {
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
 }
 
 select {
-    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 16px;
+    width: 100%;
 }
 
-button {
+#startButton {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.1em;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 200px;
+    min-width: 150px;
 }
 
-button:hover {
+#startButton:hover {
     background-color: #218838;
 }
 
-/* Estilos del contenedor del taller */
 .taller-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    text-align: left;
-    width: 100%;
-    max-width: 800px;
-    min-height: 200px;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fafafa;
 }
 
 .taller-container h2 {
-    color: #007bff;
+    color: #0056b3;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
     margin-top: 0;
 }
 
-.taller-container .ejercicio {
+.ejercicio {
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #eee;
+    border-left: 5px solid #ffc107;
+    background-color: #fffbef;
+    border-radius: 4px;
+}
+
+.ejercicio h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Estilo para la nota importante de 10° Mat */
+.alerta-relacion {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px 15px;
+    border: 1px solid #ffeeba;
     border-radius: 5px;
-    background-color: #fafafa;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para las fórmulas de MathJax */
+.taller-container .MathJax {
+    font-size: 1.2em !important;
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .control-group {
+        min-width: unset;
+    }
+
+    #startButton {
+        width: 100%;
+    }
 }
