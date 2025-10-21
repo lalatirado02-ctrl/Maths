@@ -99,7 +99,7 @@ select {
     border-radius: 4px;
 }
 
-.ejercicio h3 {
+ejercicio h3 {
     margin-top: 0;
     color: #555;
     font-size: 1.1em;
@@ -136,4 +136,21 @@ select {
     #startButton {
         width: 100%;
     }
+}
+
+/* Fix: Asegura que los controles estén encima de banners u otros elementos y permitan interacción */
+.controls {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+/* Seguridad adicional: asegúrate de que los selects acepten clicks */
+select {
+    pointer-events: auto !important;
+}
+
+/* Si existiera un banner con clases comunes que esté encima, reducir su z-index (seguro y conservador) */
+.header-banner, .hero, .banner, .hero-banner {
+    z-index: 1 !important;
 }
